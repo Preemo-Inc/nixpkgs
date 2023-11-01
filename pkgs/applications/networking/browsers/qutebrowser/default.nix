@@ -10,7 +10,7 @@
 , qtwebengine
 , enableWideVine ? false
 , widevine-cdm
-, enableVulkan ? stdenv.isLinux
+, enableVulkan ? false
 , vulkan-loader
 }:
 
