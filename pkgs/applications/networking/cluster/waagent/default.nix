@@ -10,7 +10,7 @@
   openssl,
   parted,
   procps, # for pidof,
-  python39,
+  python39, # the latest python version that waagent test against according to https://github.com/Azure/WALinuxAgent/blob/28345a55f9b21dae89472111635fd6e41809d958/.github/workflows/ci_pr.yml#L75
   shadow, # for useradd, usermod
   util-linux, # for (u)mount, fdisk, sfdisk, mkswap
 }:

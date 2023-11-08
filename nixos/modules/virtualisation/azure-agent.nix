@@ -259,5 +259,10 @@ in
       };
     };
 
+    # waagent will generate files under /etc/sudoers.d during provisioning
+    security.sudo.extraConfig = ''
+      #includedir /etc/sudoers.d
+    '';
+
   };
 }
