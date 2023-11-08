@@ -10,7 +10,7 @@
   openssl,
   parted,
   procps, # for pidof,
-  python3,
+  python39,
   shadow, # for useradd, usermod
   util-linux, # for (u)mount, fdisk, sfdisk, mkswap
 }:
@@ -19,7 +19,7 @@ let
   inherit (lib) makeBinPath;
 
 in
-python3.pkgs.buildPythonPackage rec {
+python39.pkgs.buildPythonPackage rec {
   pname = "waagent";
   version = "2.8.0.11";
   src = fetchFromGitHub {
@@ -30,7 +30,7 @@ python3.pkgs.buildPythonPackage rec {
   };
   doCheck = false;
 
-  buildInputs = with python3.pkgs; [ distro ];
+  buildInputs = with python39.pkgs; [ distro ];
   runtimeDeps = [
     findutils
     gnugrep

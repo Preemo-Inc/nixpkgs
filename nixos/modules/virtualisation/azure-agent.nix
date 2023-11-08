@@ -248,7 +248,7 @@ in
         pkgs.bash
 
         # waagent's Microsoft.OSTCExtensions.VMAccessForLinux needs Python 3
-        pkgs.python3
+        pkgs.python39
 
         # waagent's Microsoft.CPlat.Core.RunCommandLinux needs lsof
         pkgs.lsof
