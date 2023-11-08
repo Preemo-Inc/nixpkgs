@@ -61,7 +61,7 @@ in
 
         # Which provisioning agent to use. Supported values are "auto" (default), "waagent",
         # "cloud-init", or "disabled".
-        Provisioning.Agent=disabled
+        Provisioning.Agent=auto
 
         # Password authentication for root account will be unavailable.
         Provisioning.DeleteRootPassword=n
