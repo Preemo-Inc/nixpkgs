@@ -46,8 +46,6 @@ in
     boot.initrd.kernelModules = [ "ata_piix" ];
     networking.firewall.allowedUDPPorts = [ 68 ];
 
-    # Use cloud-init for provisioning
-    services.cloud-init.enable = true;
 
     environment.etc."waagent.conf".text = ''
         #
@@ -63,7 +61,7 @@ in
 
         # Which provisioning agent to use. Supported values are "auto" (default), "waagent",
         # "cloud-init", or "disabled".
-        Provisioning.Agent=cloud-init
+        Provisioning.Agent=auto
 
         # Password authentication for root account will be unavailable.
         Provisioning.DeleteRootPassword=n
