@@ -261,7 +261,9 @@ in {
         ];
         boot = {
           blacklistedKernelModules = ["nouveau" "nvidiafb"];
-          kernelModules = [ "nvidia-uvm" ];
+          extraModprobeConfig = ''
+            softdep nvidia post: nvidia-uvm
+          '';
         };
         systemd.tmpfiles.rules =
           lib.optional config.virtualisation.docker.enableNvidia
